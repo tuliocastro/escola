@@ -1,0 +1,54 @@
+<pretty-config xmlns="http://ocpsoft.org/prettyfaces/3.3.3" 
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+               xsi:schemaLocation="http://ocpsoft.org/prettyfaces/3.3.3
+               http://ocpsoft.org/xml/ns/prettyfaces/ocpsoft-pretty-faces-3.3.3.xsd">
+
+	<url-mapping id="login">
+		<pattern value="/login" />
+		<view-id value="/pages/login/login.jsf" />
+	</url-mapping>
+	
+	<url-mapping id="configuracao">
+		<pattern value="/configuracao" />
+		<view-id value="/pages/admin/configuracao.jsf" />
+	</url-mapping>
+
+	<url-mapping id="votacao">
+		<pattern value="/votacao" />
+		<view-id value="/pages/admin/votacao.jsf" />
+	</url-mapping>
+
+	<url-mapping id="ad">
+		<pattern value="/ad/#{id : adsCrudMB.idAds}" />
+		<view-id value="/pages/admin/ad.jsf" />
+		<action>#{adsCrudMB.viewAd}</action>
+	</url-mapping>
+
+	<url-mapping id="addAd">
+		<pattern value="/ad" />
+		<view-id value="/pages/admin/ad.jsf" />
+	</url-mapping>
+
+	<url-mapping id="ads">
+		<pattern value="/ads" />
+		<view-id value="/pages/admin/ads.jsf" />
+	</url-mapping>
+	
+	<url-mapping id="inicio">
+		<pattern value="/configuracao" />
+		<view-id value="/pages/admin/configuracao.jsf" />
+	</url-mapping>
+	
+	<url-mapping id="evento">
+		<pattern value="/publico/evento/#{id : eventoMB.idEntity}" />
+		<view-id value="/pages/publico/evento/evento.jsf" />
+		<action>#{eventoMB.viewEvent}</action>
+	</url-mapping>
+	
+	
+	<url-mapping id="error-404">
+		<pattern value="/error404" />
+		<view-id value="/error404.html" />
+	</url-mapping>
+
+</pretty-config>
